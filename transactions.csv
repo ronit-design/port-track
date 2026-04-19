@@ -21,12 +21,12 @@ date,account_id,ticker,action,shares,price_local,currency,commission_usd,notes
 2026-04-19,D,3115.HK,BUY,1000.0,73.9771,HKD,0.0,Opening position
 2026-04-19,D,2823.HK,BUY,15000.0,13.2051,HKD,0.0,Opening position
 2026-04-19,D,3067.HK,BUY,45500.0,11.2157,HKD,0.0,Opening position
-2026-04-19,D,914.HK,BUY,4000.0,23.1098,HKD,0.0,Opening position
+2026-04-19,D,0914.HK,BUY,4000.0,23.1098,HKD,0.0,Opening position
 2026-04-19,D,9888.HK,BUY,2700.0,120.1294,HKD,0.0,Opening position
 2026-04-19,D,1876.HK,BUY,5100.0,7.4038,HKD,0.0,Opening position
 2026-04-19,D,6690.HK,BUY,1000.0,26.9093,HKD,0.0,Opening position
 2026-04-19,D,9618.HK,BUY,2100.0,123.6765,HKD,0.0,Opening position
-2026-04-19,D,857.HK,BUY,36000.0,5.8128,HKD,0.0,Opening position
+2026-04-19,D,0857.HK,BUY,36000.0,5.8128,HKD,0.0,Opening position
 2026-04-19,D,1070.HK,BUY,2000.0,6.257,HKD,0.0,Opening position
 2026-04-19,D,4686.T,BUY,1400.0,3441.0,JPY,0.0,Opening position
 2026-04-19,D,7839.T,BUY,1800.0,1789.0,JPY,0.0,Opening position
