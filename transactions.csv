@@ -39,7 +39,7 @@ date,account_id,ticker,action,shares,price_local,currency,commission_usd,notes
 2026-04-19,D,WDS,BUY,72.0,21.4751,USD,0.0,Opening position
 2026-04-19,D,MJ,BUY,92.0,248.6368,USD,0.0,Opening position
 2026-04-19,D,DRAM,BUY,1000.0,27.6304,USD,0.0,Opening position
-2026-04-19,D,COPRF,BUY,10400.0,11.6883,USD,0.0,Opening position
+2026-04-19,D,SPHCF,BUY,10400.0,11.6883,USD,0.0,Opening position
 2026-04-19,D,PPLT,BUY,370.0,137.1514,USD,0.0,Opening position
 2026-04-19,D,IAU,BUY,4200.0,70.2022,USD,0.0,Opening position
 2026-04-19,D,SLV,BUY,4250.0,40.1519,USD,0.0,Opening position
