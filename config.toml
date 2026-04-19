@@ -1,0 +1,84 @@
+[accounts]
+R    = "RBC"
+D    = "DBS"
+Citi = "CITI"
+
+[github]
+repo      = "ronit-design/port-track"
+branch    = "main"
+file_path = "transactions.csv"
+
+[etfs]
+tickers = [
+  "MJ", "YOLO", "DRAM", "COPRF", "PPLT", "IAU", "SLV", "EWY",
+  "3115.HK", "2823.HK", "3067.HK"
+]
+
+[pence_tickers]
+# London-listed stocks DBS exports in pence — warn user if price < 10
+tickers = ["FDM.L", "WISE.L"]
+
+[fx_overrides]
+# Uncomment to freeze a specific FX rate (units of foreign CCY per 1 USD)
+# AED = 3.6725
+# CAD = 1.3688
+
+[theme_map]
+"1070.HK" = "China Tech"
+"1876.HK" = "China Consumer Staples"
+"2823.HK" = "ETF – Asia Pacific"
+"3067.HK" = "ETF – Asia Pacific"
+"3115.HK" = "ETF – Asia Pacific"
+"4686.T"  = "Japan Tech"
+"6690.HK" = "China Consumer Discretionary"
+"7839.T"  = "Japan Consumer Discretionary"
+"857.HK"  = "China Energy"
+"914.HK"  = "China Materials"
+"9618.HK" = "China Tech"
+"9888.HK" = "China Tech"
+AAPL      = "US Large Cap Tech"
+AMD       = "Semiconductors"
+AMR       = "Materials – Coal"
+AMZN      = "US Large Cap Tech"
+ANET      = "Networking"
+BABA      = "China Tech ADR"
+BBAI      = "US Small Cap Tech"
+BHP       = "Materials – Diversified Mining"
+BIDU      = "China Tech ADR"
+BLDP      = "Clean Energy"
+COPRF     = "Commodities – Copper"
+DRAM      = "Semiconductors – Memory"
+ENB       = "Infrastructure – Pipelines"
+EWY       = "ETF – Asia Pacific"
+EXPI      = "Real Estate Tech"
+FCX       = "Materials – Copper Mining"
+"FDM.L"   = "UK Tech"
+FTNT      = "Cybersecurity"
+GOOG      = "US Large Cap Tech"
+IAU       = "Precious Metals – Gold"
+IBM       = "US Large Cap Tech"
+INTC      = "Semiconductors"
+ISRG      = "Healthcare – MedTech"
+JPM       = "US Financials"
+LCID      = "Clean Energy – EV"
+LULU      = "Consumer Discretionary"
+META      = "US Large Cap Tech"
+MJ        = "Cannabis"
+MSFT      = "US Large Cap Tech"
+MU        = "Semiconductors"
+NIO       = "Clean Energy – EV"
+NVDA      = "Semiconductors"
+NVO       = "Healthcare – Pharma"
+OXY       = "Energy – Oil & Gas"
+PM        = "Consumer Staples – Tobacco"
+PPLT      = "Precious Metals – Platinum"
+QCOM      = "Semiconductors"
+RIO       = "Materials – Diversified Mining"
+RYAAY     = "European Industrials"
+SLV       = "Precious Metals – Silver"
+TLRY      = "Cannabis"
+TSM       = "Semiconductors"
+VZ        = "Telecoms"
+WDS       = "Energy – Oil & Gas"
+"WISE.L"  = "UK Fintech"
+YOLO      = "Cannabis"

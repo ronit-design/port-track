@@ -1,0 +1,24 @@
+# Secrets — never commit these
+.streamlit/secrets.toml
+service_account.json
+.env
+
+# Local backup written by the app on every read
+transactions_backup.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
