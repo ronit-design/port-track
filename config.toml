@@ -10,7 +10,7 @@ file_path = "transactions.csv"
 
 [etfs]
 tickers = [
-  "MJ", "YOLO", "DRAM", "COPRF", "PPLT", "IAU", "SLV", "EWY",
+  "MJ", "YOLO", "DRAM", "SPHCF", "PPLT", "IAU", "SLV", "EWY",
   "3115.HK", "2823.HK", "3067.HK"
 ]
 
@@ -46,7 +46,7 @@ BBAI      = "US Small Cap Tech"
 BHP       = "Materials – Diversified Mining"
 BIDU      = "China Tech ADR"
 BLDP      = "Clean Energy"
-COPRF     = "Commodities – Copper"
+SPHCF     = "Commodities – Copper"
 DRAM      = "Semiconductors – Memory"
 ENB       = "Infrastructure – Pipelines"
 EWY       = "ETF – Asia Pacific"

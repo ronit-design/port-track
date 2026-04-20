@@ -40,13 +40,26 @@ _FX_SYMBOLS: dict = {
 
 ETF_NAMES: dict = {
     "MJ": "ETFMG Alternative Harvest ETF", "YOLO": "AdvisorShares Pure Cannabis ETF",
-    "DRAM": "Stacked Intelligence ETF",    "COPRF": "Sprott Physical Copper Trust",
+    "DRAM": "Stacked Intelligence ETF",    "SPHCF": "Sprott Physical Copper Trust",
     "PPLT": "abrdn Physical Platinum Shares ETF", "IAU": "iShares Gold Trust",
     "SLV": "iShares Silver Trust",         "EWY": "iShares MSCI South Korea ETF",
     "3115.HK": "Premia CSI Caixin China New Economy ETF",
     "2823.HK": "iShares FTSE A50 China Index ETF",
     "3067.HK": "iShares Hang Seng TECH ETF",
 }
+
+
+def _to_roic_ticker(ticker: str) -> str:
+    """
+    Translate internal ticker format to ROIC API format.
+    HK stocks with 3-digit codes need a leading zero (e.g. 914.HK → 0914.HK).
+    All other tickers pass through unchanged.
+    """
+    if ticker.endswith(".HK"):
+        code = ticker[:-3]
+        if len(code) == 3:
+            return f"0{code}.HK"
+    return ticker
 
 ROIC_BASE = "https://api.roic.ai/v2"
 
@@ -357,8 +370,9 @@ def fetch_fundamentals(tickers: list, api_key: str, etf_list: list) -> pd.DataFr
                                    "exchange","dividend_yield","ex_dividend_date",
                                    "pe_ratio","ev_ebitda","pb_ratio","gross_margin"]}
         row["ticker"] = ticker; row["company_name"] = ticker
+        roic_ticker = _to_roic_ticker(ticker)
         try:
-            resp = requests.get(f"{ROIC_BASE}/company/profile/{ticker}?apikey={api_key}", timeout=15)
+            resp = requests.get(f"{ROIC_BASE}/company/profile/{roic_ticker}?apikey={api_key}", timeout=15)
             resp.raise_for_status(); p = resp.json()
             row.update({
                 "company_name": p.get("company_name", ticker) or ticker,
@@ -367,10 +381,10 @@ def fetch_fundamentals(tickers: list, api_key: str, etf_list: list) -> pd.DataFr
                 "dividend_yield": p.get("dividend_yield"), "ex_dividend_date": p.get("ex_dividend_date"),
             })
         except Exception as e:
-            logger.warning(f"ROIC profile failed for {ticker}: {e}")
+            logger.warning(f"ROIC profile failed for {roic_ticker}: {e}")
         time.sleep(0.1)
         try:
-            resp = requests.get(f"{ROIC_BASE}/fundamental/multiples/{ticker}?apikey={api_key}&limit=1", timeout=15)
+            resp = requests.get(f"{ROIC_BASE}/fundamental/multiples/{roic_ticker}?apikey={api_key}&limit=1", timeout=15)
             resp.raise_for_status(); data = resp.json()
             if data and isinstance(data, list):
                 m = data[0]
